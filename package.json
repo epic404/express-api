@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "npx tsc",
-    "build:watch": "build --watch",
+    "build:watch": "npx tsc --watch",
     "dev": "concurrently \"yarn build:watch\" \"yarn start:dev\"",
     "start": "node build/server.ts",
     "start:dev": "nodemon build/server.ts"
