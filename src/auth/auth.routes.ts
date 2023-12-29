@@ -7,7 +7,6 @@ import {
 
 const authRouter = Router();
 
-// @middleware at the route-level.
 authRouter.use((
   request: Request,
   response: Response,
@@ -17,7 +16,8 @@ authRouter.use((
   next();
 });
 
-authRouter.get('/test', (
+// TODO: Add auth middleware here.
+authRouter.get('/test-auth', (
   request: Request,
   response: Response,
 ) => {

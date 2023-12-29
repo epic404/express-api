@@ -1,8 +1,11 @@
+import 'dotenv/config';
 import express from 'express';
-import setRoutes from './routes';
+import { initRoutes } from './utils';
 
 const app = express();
 
-setRoutes(app);
+initRoutes(app);
 
-app.listen(3000, () => console.log('Listening on port 3000'));
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
+});
